@@ -1,0 +1,2 @@
+Fajlovi za teoretsko poredjenje P i PI regulatora mogu se naci u dve razlicite forme, .m skripta koja direktno simulira nas objekat i izbacuje dva grafika koja nam pokazuju pre svega eliminaciju greske stacionarnog stanja, ali i ubrzavanje sistema koji radi pod regulacijom PI kontrolera.
+Kao drugi fajl se moze naci .slx SIMULINK fajl, koji nam graficki prikazuje kako se vrsi izracunavanje vrednosti upravljanja kod oba regulatora.
