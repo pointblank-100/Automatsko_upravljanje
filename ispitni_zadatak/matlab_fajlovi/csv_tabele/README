@@ -1,2 +1,3 @@
 .csv fajlovi exsportovani za svaki tip eksperimenta, otvorenu petlju, zatvorenu petlju pod P i PI regulacijom.
 Fajlovi su spremni za ubacivanje u matlab skriptu csv_citac.m okacenu u gornjem folderu.
+Poslednji .csv fajl odnosi se na ispitivanje ARW mehanizma u zadatku. Pri zadatoj vrednosti upravljanja od 500, nakon kratkog vremena zadata je vrednost 0, pri cemu se primecuje trenutna reakcija sistema, sto dokazuje da nema prepunjavanja integratora, odnosno da ARW radi svoj posao.
