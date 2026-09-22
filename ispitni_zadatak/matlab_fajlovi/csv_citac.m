@@ -3,7 +3,7 @@ clc;
 close all;
 
 [filename, pathname] = uigetfile({'*.csv;*.txt', 'Trace fajlovi (*.csv, *.txt)'; '*.*', 'Svi fajlovi (*.*)'}, ...
-                                  'Izaberite Trace CSV/TXT fajl iz TIA Portala');
+                                  'Izaberite Trace CSV/TXT fajl sa 3 signala');
 
 if isequal(filename, 0) || isequal(pathname, 0)
     disp('Izbor fajla je otkazan.');
@@ -11,7 +11,6 @@ if isequal(filename, 0) || isequal(pathname, 0)
 end
 
 fullFilePath = fullfile(pathname, filename);
-fprintf('Ucitavanje fajla: %s...\n', filename);
 
 try
     rawData = importdata(fullFilePath);
@@ -25,27 +24,30 @@ catch
 end
 
 if isempty(matrixData)
-    error('Fajl je prazan ili MATLAB ne mo�e da procita brojeve.');
+    error('Fajl je prazan ili MATLAB ne može da pročita brojeve.');
 end
 
-[rows, ~] = size(matrixData);
+[rows, cols] = size(matrixData);
 
 Ts = 0.04; 
 time = (0:rows-1)' * Ts; 
 
-u = matrixData(:, end-1); 
-y = matrixData(:, end);   
+u = matrixData(:, end-2); 
+y = matrixData(:, end-1); 
+w = matrixData(:, end);   
 
 figure('Name', ['Odziv sistema - ' filename], 'NumberTitle', 'off', 'Color', [1 1 1]);
 
-plot(time, y, 'b-', 'LineWidth', 2.0); hold on;
-plot(time, u, 'r--', 'LineWidth', 1.8);
+plot(time, w, 'b--', 'LineWidth', 1.8); hold on;
+plot(time, y, 'k-',  'LineWidth', 2.0);          
+plot(time, u, 'r-.', 'LineWidth', 1.5);          
 
 grid on;
-title(['Odziv objekta y[k] i upravljanje u[k] (' filename ')'], 'Interpreter', 'none', 'FontSize', 12);
+title(['Analiza odziva sistema (' filename ')'], 'Interpreter', 'none', 'FontSize', 12);
 xlabel('Vreme [s]', 'FontSize', 11);
 ylabel('Vrednost signala', 'FontSize', 11);
-legend({'Izlaz objekta y[k]', 'Upravljanje u[k]'}, 'Location', 'southeast', 'FontSize', 10);
-xlim([0 max(time)]);
 
-disp('Prikaz rezultata');
+legend({'Zadata vrednost w[k]', 'Izlaz objekta y[k]', 'Upravljanje u[k]'}, ...
+       'Location', 'southeast', 'FontSize', 10);
+
+xlim([0 max(time)]);
