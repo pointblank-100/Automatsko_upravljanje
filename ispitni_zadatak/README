@@ -1,4 +1,7 @@
-Ispitni zadatak, fajlovi koji su bili predati od strane Save Mladenovica, br. indexa 210/2023.
+Ispitni zadatak (zadatak zvezda sa dopunom), fajlovi koji su bili predati od strane Save Mladenovica, br. indexa 210/2023.
+Fakultet inzenjerskih nauka Univerziteta u Kragujevcu
+Predmet: Automatsko upravljanje
+Skolska 2025/2026 godina, Nastavnik: prof. dr. Milan Matijevic
 U zakacenom zip fajlu nalazi se projektni zadatak u kome je ostvareno upravljanje nad objektom prvog reda, sa parametrima koje smo izvodili iz EPFL vezbi. 
 U projektu se realizuje upravljanje objektom i u optvorenoj i zatvorenoj povratnoj sprezi, sa mogucnoscu prebacivanja modova na odgovarajucem prekidacu na HMI panelu.
 Ako je zadatak prebacen u mod sa zatvorenom povratnom spregom, operater je u mogucnosti da bira da li koristi P ili PI regulator za upravljanje nad objektom, ponovo preko odgovarajuceg dugmeta na HMI panelu.
@@ -8,3 +11,6 @@ U sam SCL kod, integrisani su i mehanizmi saturacije objekta, i ARW mehanizam, t
 HMI panel je projektovan tako da su svi parametri modularni i unoseni od strane operatera, time dajuci potpunu slobodu upravljacu da eksperimentise sa raznim vrednostima regulatorskih pojacanja.
 Za dodatna objanjenja oko koriscenja MATLAB skripti, mozete koristiti zakacene .md fajlove: MATLAB_fajlovi i uputsvo_za_koriscenje.
 Za realizaciju gradiva, potrebno je proci sve EPFL vezbe, kako bi mogli da razumemo sta i kako se desava tokom simulacije i zbog cega zadajemo pocetne parametre koje zadajemo objektu.
+Ukoliko se lepo isprati zakacen .pdf izvestaj zadatka, sve rezultate sa videa moguce je reprodukovati u celosti.
+Zadatak se pokrece tako sto je potrebno .zip fajl u ovom folderu pod nazivom konacan_rad_supervizor skinuti i odpakovati. U dobijenom folderu konacan_rad_supervizor (ne backup), potrebno je pokrenuti .ap16 fajl.
+Ukoliko operater koristi kasniju verziju TIA Portala, na primer v20, ili v21, potrebno je iskoristiti funkciju upgrejdovanja projekta koju simens nudi, uz pracenje tutorijala sa sledeceg linka: https://industrialmonitordirect.com/blogs/knowledgebase/tia-portal-rewiring-tags-after-moving-to-structs
