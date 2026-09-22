@@ -1,0 +1,2 @@
+.csv fajlovi exsportovani za svaki tip eksperimenta, otvorenu petlju, zatvorenu petlju pod P i PI regulacijom.
+Fajlovi su spremni za ubacivanje u matlab skriptu csv_citac.m okacenu u gornjem folderu.
