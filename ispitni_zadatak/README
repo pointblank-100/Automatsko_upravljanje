@@ -7,3 +7,4 @@ Programska logika u samom TIA Portalu, realizovana je tako da postoji vise bloko
 U sam SCL kod, integrisani su i mehanizmi saturacije objekta, i ARW mehanizam, time eliminisuci mogucnost nefunkcionisanja programa usled nepredvidjenih unosnih parametara.
 HMI panel je projektovan tako da su svi parametri modularni i unoseni od strane operatera, time dajuci potpunu slobodu upravljacu da eksperimentise sa raznim vrednostima regulatorskih pojacanja.
 Za dodatna objanjenja oko koriscenja MATLAB skripti, mozete koristiti zakacene .md fajlove: MATLAB_fajlovi i uputsvo_za_koriscenje.
+Za realizaciju gradiva, potrebno je proci sve EPFL vezbe, kako bi mogli da razumemo sta i kako se desava tokom simulacije i zbog cega zadajemo pocetne parametre koje zadajemo objektu.
