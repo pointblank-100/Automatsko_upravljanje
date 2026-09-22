@@ -1,1 +1,8 @@
 Ispitni zadatak, fajlovi koji su bili predati od strane Save Mladenovica, br. indexa 210/2023.
+U zakacenom zip fajlu nalazi se projektni zadatak u kome je ostvareno upravljanje nad objektom prvog reda, sa parametrima koje smo izvodili iz EPFL vezbi. 
+U projektu se realizuje upravljanje objektom i u optvorenoj i zatvorenoj povratnoj sprezi, sa mogucnoscu prebacivanja modova na odgovarajucem prekidacu na HMI panelu.
+Ako je zadatak prebacen u mod sa zatvorenom povratnom spregom, operater je u mogucnosti da bira da li koristi P ili PI regulator za upravljanje nad objektom, ponovo preko odgovarajuceg dugmeta na HMI panelu.
+Loggovanje rezultata belezi se u .txt fajlu koji se cuva na C particiji memorije operaterovog sistema, a njegovo pocinjanje i stajanje vrsi se pritiskom na odgovarajuce dugmice na HMI panelu.
+Programska logika u samom TIA Portalu, realizovana je tako da postoji vise blokova, koji se zasebno izvrsavaju u odnosu na to koji tip zadatka je izabran, dok je celokupan program nadziran od strane supervizorskog bloka koji se stara da pri iskljucivanju sistema svi parametri se resetuju na nule.
+U sam SCL kod, integrisani su i mehanizmi saturacije objekta, i ARW mehanizam, time eliminisuci mogucnost nefunkcionisanja programa usled nepredvidjenih unosnih parametara.
+HMI panel je projektovan tako da su svi parametri modularni i unoseni od strane operatera, time dajuci potpunu slobodu upravljacu da eksperimentise sa raznim vrednostima regulatorskih pojacanja.
