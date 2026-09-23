@@ -1,7 +1,4 @@
-Fajlovi za teoretsko poredjenje P i PI regulatora mogu se naci u dve razlicite forme, .m skripta koja direktno simulira nas objekat i izbacuje dva grafika koja nam pokazuju pre svega eliminaciju greske stacionarnog stanja, ali i ubrzavanje sistema koji radi pod regulacijom PI kontrolera.
-Kao drugi fajl se moze naci .slx SIMULINK fajl, koji nam graficki prikazuje kako se vrsi izracunavanje vrednosti upravljanja kod oba regulatora.
-Kao treca skripta, moze se uociti .m fajl pod nazivom skripta_za_citanje_podataka, koja nas pri pokretanju pita za .txt fajl sa specificno odredjenom formom koja odgovara zapisanom log .txt fajlu iz TIA Portal-a.
-Nakon selektovanja fajla, ukoliko smo zapoceli snimanje podataka kada je vrednost izlaza bila 0, i zavrsili loggovanje podataka nakon sto je izlazna vrednost postigla svoju stacionarnu vrednost, dobicemo grafik.
-Usled limitacija programa, najmanji interval u kome TIA Portal moze kontinualno da belezi vrednosti promenljivih u fajl jeste 1 sekunda, sto je za nas presporo, buduci da se ceo prelazni proces zavrsi pre 1 sekunde.
-Zbog ovoga, Acquisition mode hmi taga koji se belezi podesen je na On change, a ne na podeseno vreme. Ovime smo postigli belezenje vrednosti na svakih 40 ms, ali se kao problem javlja da tokom perioda kada se uspostavi stacionarno stanje, odnosno kada se vrednost izlaza ne menja, ne upisuju se vrednosti u .txt logging file.
-Ukoliko se pojave slucajevi da grafik izgleda abnormalno ili nemoguce, u ovome se moze traziti problem. Kako bi se ovo izbeglo, potrebno je pokrenuti i zaustaviti loggovanje kada je sistem u stanju mirovanja, odnosno pre i nakon prelaznog procesa.
+U tri nezavisna foldera smesteni su fajlovi korisceni pri pisanju izvestaja, i to:
+U folderu csv_tabele nalazi se .m skripta za citanje tabela, kao i 4 .csv fajla koji odgovaraju radjenim eksperimentima, i to: otvorena petlja, zatvorena petlja pod P regulacijom, zarvorena petlja pod PI regulacijom i tabela sa rezultatima testa za ARW.
+U folderu teoretska_poredjenja_sistema nalazi se matlab i simulink model sistema.
+U folderu citanje_log_fajla nalazi se .m skripta za citanje tekstualnog log fajla, kao i jedan .txt fajl koji je snimljen pri izvrsavanju eksperimenta. Takodje postoji video zapis koji to takodje prikazuje.
