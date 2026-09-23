@@ -3,10 +3,10 @@ clc;
 close all;
 
 [filename, pathname] = uigetfile({'*.csv;*.txt', 'Trace fajlovi (*.csv, *.txt)'; '*.*', 'Svi fajlovi (*.*)'}, ...
-                                  'Izaberite Trace CSV/TXT fajl sa 3 signala');
+                                  'Odabir fajla');
 
 if isequal(filename, 0) || isequal(pathname, 0)
-    disp('Izbor fajla je otkazan.');
+    disp('otkazano');
     return;
 end
 
@@ -24,7 +24,7 @@ catch
 end
 
 if isempty(matrixData)
-    error('Fajl je prazan ili MATLAB ne može da pročita brojeve.');
+    error('greska');
 end
 
 [rows, cols] = size(matrixData);
